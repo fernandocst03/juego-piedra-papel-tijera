@@ -1,0 +1,218 @@
+:root{
+  --dark:  rgb(38,48, 52);
+  --white: #e9f4ff;
+  --purple: #4c51c6;
+  --blue:#607ff2;
+  --blue-light:#b0c1ff;
+  --orange: #f99b43;
+
+  --grey-light: hsl(0, 1%, 86%);
+  --grey-dark: hsl(207, 13%, 34%);
+  --rampart:'Rampart One';
+  --rubuk:'Rubik'
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 62.5%; /* 1rem = 10px */
+}
+body{
+  width: 100%;
+  height: auto;
+  margin-top: 2.5rem;
+  background-color: var(--dark);
+  max-width: 300px;
+  font-family: var(--rubuk);
+}
+main{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* Header */
+header h1{
+  margin-bottom: 1rem;
+  padding: 0rem 1.2rem;
+  text-align: center;
+  font-size: 3rem;
+  font-family: var(--rampart);
+  color: var(--white);
+}
+/* Marcador */
+.score-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0rem 1rem;
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  font-family: var(--rubuk);
+  color: var(--white);
+}
+.score-players{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  gap: 3rem;
+  font-size: 1.8rem;
+}
+.score__cpu{
+  width:70px;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: var(--blue);
+}
+.score__user{
+  text-align: center;
+  width:70px;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: var(--purple);
+}
+/* Partida */
+.game-container{
+  width:90%;
+  height: 170px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--blue-light);
+  background-color: #e9f4ff32;
+}
+.game-container p{
+  font-size: 1.4rem;
+  font-family: var(--rubuk);
+  color: var(--white);
+}
+.game-players{
+  width: 100px; 
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .8rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: var(--white);
+}
+.game-players img{
+  width: 80px;
+  animation: imagen 2s infinite;
+}
+.win{
+  border-radius: .5rem;
+  background-color: rgba(60, 255, 60, 0.795);
+}
+.lose{
+  border-radius: .5rem;
+  background-color: rgba(255, 60, 60, 0.831);
+}
+.empate{
+  border-radius: .5rem;
+  background-color: rgba(47, 48, 48, 0.761);
+}
+/* Resultado */
+#resultado{
+  width: 90%;
+  height: auto;
+}
+.resultado-container{
+  width: 95%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.4rem;
+  padding: 1rem;
+  font-size: 1.4rem;
+  border-radius: 10px;
+  background-color: var(--blue-light);
+}
+/* Opciones */
+.butons-container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+.options-container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.option{
+  padding: .3rem;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background-color: #94abfe27;
+  transition: all .3s ease;
+}
+.option:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  background-color: var(--blue-light);
+}
+.option img{
+  width: 70px;
+  height: 70px;
+}
+.disabled{
+  opacity: .5;
+  pointer-events: none;
+}
+.selected{
+  background-color: var(--blue);
+}
+
+/* Boton reinicio */
+.btn-reiniciar{
+  width: 90%;
+  height: auto;
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size:1.6rem;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-weight: bold;
+  background-color: var(--orange);
+  transition: all .3s ease;
+}
+.btn-reiniciar:hover{
+  transform: scale(1.09);
+  background-color: #f99b43b3;
+}
+
+
+@keyframes imagen {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.06);
+  }
+  100%{
+    transform: scale(1);
+  }
+}

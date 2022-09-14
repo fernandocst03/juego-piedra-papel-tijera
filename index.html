@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Rubik:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <script
+      src="https://kit.fontawesome.com/e62dd219ae.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Juego piedra, papel o tijera</title>
+  </head>
+  <body>
+    <header>
+      <h1>Piedra, papel o tijera</h1>
+    </header>
+    <main>
+      <section class="score-container">
+        <div>MARCADOR</div>
+        <div class="score-players">
+          <div class="score__cpu">
+            <span><i class="fa-solid fa-computer">:</i></span> <span id="score-cpu"></span>
+          </div>
+          <div class="score__user">
+            <span><i class="fa-solid fa-user"></i>:</span> <span id="score-user"></span>
+          </div>
+        </div>
+      </section>
+      <section class="game-container">
+        <div id="cpu" class="game-players ">
+          <h3>CPU</h3>
+          <img src="./src/img/question.png" alt="opcion cpu" id="img-option-cpu"/>
+        </div>
+        <p>vs</p>
+        <div id="user" class="game-players">
+          <h3>Tú</h3>
+          <img src="./src/img/question.png" alt="opcion player" id="img-option-player"/>
+        </div>
+      </section>
+      <section id="resultado">
+      </section>
+      <section class="butons-container">
+        <div class="options-container">
+          <div class="option" id="piedra">
+            <img src="./src/img/piedra.png" alt="" />
+          </div>
+          <div class="option" id="papel">
+            <img src="./src/img/papel.png" alt="" />
+          </div>
+          <div class="option" id="tijera">
+            <img src="./src/img/tijera.png" alt="" />
+          </div>
+        </div>
+        <button class="btn-reiniciar" id="btn">Reiniciar</button>
+      </section>
+    </main>
+    <script type="module" src="./js/main.mjs"></script>
+  </body>
+</html>
